@@ -1,0 +1,34 @@
+{
+  "name": "micro-web",
+  "version": "1.0.0",
+  "description": "基于qiankun的微前端demo",
+  "main": "",
+  "scripts": {
+    "start": "pm2 start pm2.config.js",
+    "delete": "pm2 delete pm2.config.js",
+    "restart": "pm2 restart pm2.config.js",
+    "i": "yarn && node script/install.js ./",
+    "build": "node script/build.js ./",
+    "copy-file": "node script/copy-file.js",
+    "build&deploy": "yarn build && yarn copy-file && yarn && yarn restart",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://xx.git"
+  },
+  "keywords": [],
+  "author": {
+    "email": "204084802@qq.com",
+    "name": "LongJinwen"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/koa": "^2.13.4",
+    "fs-extra": "^10.0.0"
+  }
+}
