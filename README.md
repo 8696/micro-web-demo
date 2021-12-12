@@ -51,18 +51,13 @@
 
 > vue: yarn serve
 
-### 测试
+### 快速测试
 
 快捷安装
 > yarn i
 
-打包
-> yarn build
-
-测试
-> yarn copy-file
-
-> yarn start or node server.js
+打包 & 启动（需要安装pm2）
+> yarn build&deploy
 
 运行在 [http://localhost:38003](http://localhost:38003/)
 
