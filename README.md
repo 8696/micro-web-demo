@@ -51,6 +51,9 @@
 
 > vue: yarn serve
 
+主应用运行在 [http://localhost:8881/](http://localhost:8881/)
+
+
 ### 快速测试
 
 快捷安装
