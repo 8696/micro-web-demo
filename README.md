@@ -60,7 +60,7 @@
 > yarn i
 
 打包 & 启动（需要安装pm2）
-> yarn build&deploy
+> yarn build-deploy
 
 运行在 [http://localhost:38003](http://localhost:38003/)
 

@@ -10,7 +10,7 @@
     "i": "yarn && node script/install.js ./",
     "build": "node script/build.js ./",
     "copy-file": "node script/copy-file.js",
-    "build&deploy": "yarn build && yarn copy-file && yarn && yarn restart",
+    "build-deploy": "yarn build && yarn copy-file && yarn && yarn restart",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
