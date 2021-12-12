@@ -123,7 +123,7 @@ if (window.__POWERED_BY_QIANKUN__) {
 
 ### 通信
 
-主子应用可以自定义[事件](http://micro.icode.link)进行通信，可查看 demo 示例
+主子应用可以自定义 [事件](http://nodejs.cn/api/events.html) 进行通信，可查看 demo 示例
 
 **实现**
 
