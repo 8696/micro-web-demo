@@ -11,24 +11,29 @@ export const microApps: MicroConfigType[] = [
   {
     name: 'react-app-01',
     entry: process.env.NODE_ENV === 'production'
-      ? '/react-app-01/index.html'
+      // 集合部署模式需要拼接域名
+      ? `${window.location.origin}/react-app-01/index.html`
       : 'http://localhost:8882',
     default: true
   },
   {
     name: 'react-app-02',
     entry: process.env.NODE_ENV === 'production'
-      ? '/react-app-02/index.html'
+      ? `${window.location.origin}/react-app-02/index.html`
       : 'http://localhost:8883'
   },
   {
     name: 'vue-app-01',
     entry: process.env.NODE_ENV === 'production'
-      ? '/vue-app-01/index.html'
+      ? `${window.location.origin}/vue-app-01/index.html`
       : 'http://localhost:8884'
   }
 ]
 
 export const getMicroDefaultApp = (): MicroConfigType | null => {
   return microApps.find(item => item.default) || null
+}
+
+export const getMicroApp = (name: string): MicroConfigType | null => {
+  return  microApps.find(item => item.name === name) || null
 }

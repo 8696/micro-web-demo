@@ -1,7 +1,7 @@
 {
   "name": "micro-web",
   "version": "1.0.0",
-  "description": "基于qiankun的微前端demo",
+  "description": "基于qiankun及micro-app的微前端demo",
   "main": "",
   "scripts": {
     "start": "pm2 start pm2.config.js",

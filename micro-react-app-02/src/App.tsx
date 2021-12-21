@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 const Main = React.lazy(() => import('@/layout/main'))
 
-declare const window: {__POWERED_BY_QIANKUN__: boolean}
 
 type AppPropsType = {
   basePath?: string
@@ -11,7 +10,7 @@ type AppPropsType = {
 
 export default (props: AppPropsType) => {
   return (
-    <BrowserRouter basename={window.__POWERED_BY_QIANKUN__ ? props?.basePath : '/'}>
+    <BrowserRouter basename={props?.basePath}>
       <React.Suspense fallback={<></>}>
         <Switch>
           <Route exact path='/' render={() => <Redirect to='/home' />} />
