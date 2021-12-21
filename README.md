@@ -5,6 +5,9 @@
 
 基于 `qiankun` 的微前端demo项目
 
+基于 `micro-app` 的在 [micro-app-jd](https://github.com/8696/micro-web-demo/tree/micro-app-jd) 分支
+
+
 ### 预览
 
 [http://micro.icode.link](http://micro.icode.link/)
