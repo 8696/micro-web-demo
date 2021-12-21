@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PUBLIC_PATH = path.resolve(__dirname, '../public');
+const ROOT_PATH = path.resolve(__dirname, '../');
 
 function getMicroPaths() {
   const files = fs.readdirSync(path.resolve(__dirname, '../'));
@@ -73,8 +74,23 @@ function copyEntryFile() {
     , path.resolve(PUBLIC_PATH, './index.html')
   );
 }
+
+function clearNodeModules() {
+  getMicroPaths().forEach(microApp => {
+    try {
+      fsExtra.removeSync(path.resolve(microApp, './node_modules'))
+      // console.log(path.resolve(microApp, './node_modules'))
+    } catch (e) {
+    }
+  })
+  try {
+    fsExtra.removeSync(path.resolve(ROOT_PATH, './node_modules'))
+  } catch (e) {
+  }
+}
+
 module.exports = {
   getMicroPaths, clearPublicPath, getMicroBuildPaths,
   clearMicroBuildPaths, getMicroAppName, makePublicMicroPaths,
-  moveAppBuildFileToPublic, copyEntryFile
+  moveAppBuildFileToPublic, copyEntryFile, clearNodeModules
 }
