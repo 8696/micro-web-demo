@@ -19,6 +19,7 @@ export default () => {
     notification.open({
       message: 'Path changed: ' + pathname
     })
+
     /**
      * @description micro 不用设置默认应用，在监听到地址为 / 的时候可跳转至默认应用
      * @description 如果默认主页是主应用自带这里更改为对应地址

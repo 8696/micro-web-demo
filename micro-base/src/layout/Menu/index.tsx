@@ -23,8 +23,8 @@ export default () => {
   return (
     <div className={style.menuMain}>
       <div className={style.menuLogo} onClick={goHome}>
-        <img src={require('@/asset/image/react-logo.svg').default}  alt=''/>
-        <span>Micro web</span>
+        <img src={require('@/asset/image/micro-app.png')}  alt=''/>
+        <span>MicroApp</span>
       </div>
       <Menu
         selectedKeys={selectedKeys}
@@ -43,6 +43,12 @@ export default () => {
         </Menu.Item>
         <Menu.Item key='system' icon={<DesktopOutlined />}>
           <Link to='/system'>内置页面</Link>
+        </Menu.Item>
+        <Menu.Item key='github' icon={<DesktopOutlined />}>
+          <a href='https://github.com/8696/micro-web-demo/tree/micro-app-jd' target='_blank' rel='noreferrer'>GitHub</a>
+        </Menu.Item>
+        <Menu.Item key='qiankun' icon={<DesktopOutlined />}>
+          <a href='http://micro.icode.link' target='_blank' rel='noreferrer'>qiankun版本</a>
         </Menu.Item>
       </Menu>
     </div>
