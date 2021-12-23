@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react'
 import { useEffect } from 'react'
-import { notification } from 'antd'
 import { Route, useHistory, Switch, useLocation } from 'react-router-dom'
 import { hasToken } from '@/helper/token'
 
@@ -14,12 +13,9 @@ import { getMicroDefaultApp } from '@/micro.config'
 export default () => {
   const history = useHistory()
   const location = useLocation()
+
   useEffect(() => {
     const pathname = history.location.pathname
-    notification.open({
-      message: 'Path changed: ' + pathname
-    })
-
     /**
      * @description micro 不用设置默认应用，在监听到地址为 / 的时候可跳转至默认应用
      * @description 如果默认主页是主应用自带这里更改为对应地址

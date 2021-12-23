@@ -2,13 +2,15 @@ import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
 import 'modern-normalize/modern-normalize.css'
 import './style/global.style.less'
-
+import { setMicroEvent } from '@/micro/event'
 import App from './App'
 
 declare const window : {
   __MICRO_APP_BASE_ROUTE__: string;
   __MICRO_APP_ENVIRONMENT__: boolean;
   __MICRO_APP_PUBLIC_PATH__: string;
+  microApp: any;
+  addEventListener: any
 }
 
 declare let __webpack_public_path__: string
@@ -21,6 +23,13 @@ type RenderPropsType = {
 if (window.__MICRO_APP_ENVIRONMENT__) {
   __webpack_public_path__ = window.__MICRO_APP_PUBLIC_PATH__
   console.log(__webpack_public_path__)
+
+  setMicroEvent(window.microApp?.getData().microEvent)
+
+  window.addEventListener('unmount',  () => {
+    // 卸载应用
+    ReactDOM.unmountComponentAtNode(document.getElementById('root') as Element)
+  })
 } else {
   /**
    * @description 构建后不允许单独运行

@@ -124,4 +124,57 @@ if (window.__MICRO_APP_ENVIRONMENT__) {
 
 ### 通信
 
-实现中...
+
+主子应用可以自定义 [事件](http://nodejs.cn/api/events.html) 进行通信，可查看 demo 示例
+
+**实现**
+
+主应用：
+
+主应用新建一个单例事件对象，该 `events` 对象来自 nodejs
+```javascript
+import EventEmitter from 'events'
+export default new EventEmitter()
+```
+
+在注册子应用时将该事件传入 `props`
+
+```jsx
+import microAppZoe from '@micro-zoe/micro-app'
+import microEvent from '@/micro/event'
+
+microAppZoe.setData('react-app-01', { microEvent })
+<micro-app name='react-app-01' url='http://' baseroute='/react-app-01' />
+```
+
+子应用：
+
+子应用新建设置和获取单例事件的方法
+
+```typescript
+import { EventEmitter as Type } from 'events'
+
+type EventEmitterType = Type | null
+
+let microEvent: EventEmitterType = null
+
+export const setMicroEvent = (_: EventEmitterType) => {
+  microEvent = _
+}
+export const getMicroEvent = (): EventEmitterType => microEvent
+```
+
+子应用获取事件单例对象并保存
+
+```typescript
+if (window.__MICRO_APP_ENVIRONMENT__) {
+  setMicroEvent(window.microApp?.getData().microEvent)
+}
+```
+
+子应用使用
+
+```typescript
+import { getMicroEvent } from '@/micro/event'
+getMicroEvent()?.on('main-message', onMicroMessageHandle)
+```
