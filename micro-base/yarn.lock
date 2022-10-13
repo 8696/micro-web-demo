@@ -1690,7 +1690,7 @@
 
 "@micro-zoe/micro-app@^0.6.2":
   version "0.6.2"
-  resolved "http://8.129.43.100:39004/@micro-zoe%2fmicro-app/-/micro-app-0.6.2.tgz#470e2036cf84a9353354995862a7c160d708ab92"
+  resolved "https://registry.npmmirror.com/@micro-zoe/micro-app/-/micro-app-0.6.2.tgz#470e2036cf84a9353354995862a7c160d708ab92"
   integrity sha512-Qx3UzjRIuhAw7bxL9P9iD4KNQIn6tk3Paq66KZ/M+HlV7z1jL99khIqMRdLiQemHA/cFqi2B1n7BaWB2wb2aZQ==
 
 "@nodelib/fs.scandir@2.1.5":
