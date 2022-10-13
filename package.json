@@ -29,7 +29,7 @@
     "koa-static": "^5.0.0"
   },
   "dependencies": {
-    "@types/koa": "^2.13.4",
-    "fs-extra": "^10.0.0"
+    "@types/koa": "^2.13.5",
+    "fs-extra": "^10.1.0"
   }
 }
