@@ -11,7 +11,6 @@
     "build:production": "yarn eslint && cross-env CUSTOM_ENV=production node scripts/build.js",
     "test": "node scripts/test.js",
     "eslint": "cross-env NODE_ENV=production eslint --fix ./src",
-    "prepare": "husky install",
     "preview": "serve -s -u ./build"
   },
   "lint-staged": {
@@ -74,7 +73,6 @@
     "file-loader": "6.2.0",
     "fs-extra": "^9.1.0",
     "html-webpack-plugin": "4.5.2",
-    "husky": "^7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.6.3",
     "jest-circus": "26.6.3",

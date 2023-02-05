@@ -7,7 +7,7 @@
     "start": "pm2 start pm2.config.js",
     "delete": "pm2 delete pm2.config.js",
     "restart": "pm2 restart pm2.config.js",
-    "i": "yarn && node script/install.js ./",
+    "i": "yarn clear-node-modules && yarn && node script/install.js ./",
     "build": "node script/build.js ./",
     "copy-file": "node script/copy-file.js",
     "build-deploy": "yarn build && yarn copy-file && yarn && yarn restart",
