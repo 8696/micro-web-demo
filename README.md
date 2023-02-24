@@ -44,12 +44,24 @@
 
 使用了 `yarn` 管理依赖包
 
-分别给四个项目安装依赖：`react` 项目在 `.env` 配置端口，`vue` 项目在 `vue.config.js` 配置
+**安装依赖**
+
+> 单独安装(分别进入4个应用安装)
+
+> 快速安装 yarn i
+
+
+**端口配置**
+
+`react` 项目在 `.env` 配置端口，`vue` 项目在 `vue.config.js` 配置
 
 **子应用配置**
 
 > micro-base/src/micro.config.ts
+
 > micro-base/src/view/micro-app/xxx.tsx
+
+**启动**
 
 > react: yarn start:xxx
 
@@ -60,11 +72,9 @@
 
 ### 快速测试
 
-快捷安装
-> yarn i
+一键安装依赖 & 一键构建打包 & 一键运行
 
-打包 & 启动（需要安装pm2）
-> yarn build-deploy
+> yarn start
 
 运行在 [http://localhost:38004](http://localhost:38004/)
 
