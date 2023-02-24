@@ -15,4 +15,7 @@ app.use(async (context) => {
   context.body = fs.readFileSync(path.resolve(publicPath, './index.html')).toString()
 });
 
-app.listen(38003);
+const port = 38003
+
+app.listen(port);
+console.log('预览：http://localhost:' + port)
