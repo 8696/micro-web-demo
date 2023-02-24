@@ -44,7 +44,8 @@ export default () => {
         sandbox: {
           strictStyleIsolation: false,
           experimentalStyleIsolation: false
-        }
+        },
+        prefetch: false
       })
     }
   })
