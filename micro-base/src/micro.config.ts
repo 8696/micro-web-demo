@@ -26,6 +26,12 @@ export const microApps: MicroConfigType[] = [
     entry: process.env.NODE_ENV === 'production'
       ? '/vue-app-01/index.html'
       : 'http://localhost:8884'
+  },
+  {
+    name: 'micro-angular-app-01',
+    entry: process.env.NODE_ENV === 'production'
+      ? '/angular-app-01/index.html'
+      : 'http://localhost:8885'
   }
 ]
 

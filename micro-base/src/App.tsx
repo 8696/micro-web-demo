@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { notification } from 'antd'
 import { Route, useHistory, Switch, useLocation } from 'react-router-dom'
 import { hasToken } from '@/helper/token'
-
+import 'zone.js'
 const Login = React.lazy(() => import('@/view/login'))
 const Main = React.lazy(() => import('@/layout/Main'))
 

@@ -20,7 +20,9 @@
 
 子应用2 [micro-base](./micro-react-app-02)：`react^17.0.2`
 
-子应用3 [micro-base](./micro-vue-app-01)：`vue^3.2.3`
+子应用3 [micro-base](./micro-vue-app-01)：`vue^3.2.40`
+
+子应用4 [micro-angular-app-01](./micro-angular-app-01)：`angular^15.2.0`
 
 
 ### 功能
@@ -46,14 +48,18 @@
 
 **安装依赖**
 
-> 单独安装(分别进入4个应用安装)
+> 单独安装(分别进入5个应用安装)
 
 > 快速安装 yarn i
 
 
 **端口配置**
 
-`react` 项目在 `.env` 配置端口，`vue` 项目在 `vue.config.js` 配置
+`react` 项目： `.env`
+
+`vue` 项目： `vue.config.js` 配置
+
+`angular` 项目： `webpack.extra.js` 配置
 
 **子应用配置**
 
@@ -64,6 +70,8 @@
 > react: yarn start:xxx
 
 > vue: yarn serve
+
+> angular: yarn start
 
 主应用运行在 [http://localhost:8881/](http://localhost:8881/)
 
@@ -89,11 +97,13 @@
 
 > 删除 `micro-vue-app-01` 下 `vue.config.js` 的 `publicPath` 配置
 
+> 删除 `micro-angular-app-01` 下 `package.json script.build` 的 `--base-href` 选项配置
+
 > 更改 `micro-base/src/micro.config.ts` 的 `entry` 配置
 
 **集合部署**
 
-在构建完之后目录需整理如下：
+在构建完之后目录需整理如下（运行**快速测试**参考 `/public` 结构）：
 
 ```
 |-- index.html 
@@ -109,6 +119,9 @@
 |-- vue-app-01
     |-- index.html
     |-- static
+|-- angular-app-01
+    |-- index.html
+    |-- ...js/css/xx
 ```
 
 

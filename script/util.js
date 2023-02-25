@@ -78,8 +78,10 @@ function copyEntryFile() {
 function clearNodeModules() {
   getMicroPaths().forEach(microApp => {
     try {
+      console.log('remove: ' + path.resolve(microApp, './node_modules'))
       fsExtra.removeSync(path.resolve(microApp, './node_modules'))
-      // console.log(path.resolve(microApp, './node_modules'))
+      console.log('remove: ' + path.resolve(microApp, './build'))
+      fsExtra.removeSync(path.resolve(microApp, './build'))
     } catch (e) {
     }
   })

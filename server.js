@@ -7,7 +7,7 @@ const app = new Koa();
 const publicPath = path.resolve(__dirname, './public')
 
 app.use(koaStatic(publicPath, {
-  maxAge: 20000
+  maxAge: 0
 }));
 
 app.use(async (context) => {
