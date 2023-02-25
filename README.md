@@ -16,11 +16,11 @@
 
 主应用 [micro-base](./micro-base)：`react^17.0.2`
 
-子应用1 [micro-base](./micro-react-app-01)：`react^17.02`
+子应用1 [micro-react-app-01](./micro-react-app-01)：`react^17.02`
 
-子应用2 [micro-base](./micro-react-app-02)：`react^17.0.2`
+子应用2 [micro-react-app-02](./micro-react-app-02)：`react^17.0.2`
 
-子应用3 [micro-base](./micro-vue-app-01)：`vue^3.2.40`
+子应用3 [micro-vue-app-01](./micro-vue-app-01)：`vue^3.2.40`
 
 子应用4 [micro-angular-app-01](./micro-angular-app-01)：`angular^15.2.0`
 
