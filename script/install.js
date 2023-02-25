@@ -27,4 +27,9 @@ try {
 } catch (e) {
 }
 
+try {
+  install('cd '+ p +'micro-angular-app-01 && yarn');
+} catch (e) {
+}
+
 console.log('install end.')

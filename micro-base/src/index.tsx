@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 import 'modern-normalize/modern-normalize.css'
 import './style/global.style.less'
-
+import 'zone.js'
 import App from './App'
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'))

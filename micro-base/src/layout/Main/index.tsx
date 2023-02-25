@@ -15,7 +15,8 @@ import microApp from '@micro-zoe/micro-app'
 microApp.start()
 import MicroReact01 from '@/view/micro-app/react-app-01'
 import MicroReact02 from '@/view/micro-app/react-app-02'
-import MicroVue02 from '@/view/micro-app/vue-app-01'
+import MicroVue01 from '@/view/micro-app/vue-app-01'
+import MicroAngular from '@/view/micro-app/angular-app-01'
 export default () => {
 
 
@@ -41,7 +42,8 @@ export default () => {
             }
             <Route path='/react-app-01' component={MicroReact01}/>
             <Route path='/react-app-02' component={MicroReact02}/>
-            <Route path='/vue-app-01' component={MicroVue02}/>
+            <Route path='/vue-app-01' component={MicroVue01}/>
+            <Route path='/angular-app-01' component={MicroAngular}/>
           </React.Suspense>
         </div>
       </div>

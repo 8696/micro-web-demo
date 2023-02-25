@@ -41,6 +41,9 @@ export default () => {
         <Menu.Item key='vue-app-01' icon={<DesktopOutlined />}>
           <Link to='/vue-app-01/home'>Vue app</Link>
         </Menu.Item>
+        <Menu.Item key='angular-app-01' icon={<DesktopOutlined />}>
+          <Link to='/angular-app-01/home'>Angular app</Link>
+        </Menu.Item>
         <Menu.Item key='system' icon={<DesktopOutlined />}>
           <Link to='/system'>内置页面</Link>
         </Menu.Item>
