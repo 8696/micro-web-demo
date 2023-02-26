@@ -35,6 +35,6 @@ declare const window: { __POWERED_BY_QIANKUN__: boolean; }
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [{ provide: APP_BASE_HREF, useValue: window.__POWERED_BY_QIANKUN__ ? '/micro-angular-app-01' : '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: window.__POWERED_BY_QIANKUN__ ? '/angular-app-01' : '/' }]
 })
 export class AppRoutingModule { }
