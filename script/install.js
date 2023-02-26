@@ -1,10 +1,11 @@
-const {execSync} = require('child_process');
+const shelljs = require('shelljs')
+const { getLogIns } = require('./util')
 
 const p = process.argv[2] || '../'
 
 const install = (cmd) => {
-  console.log('run: ' + cmd);
-  execSync(cmd);
+  getLogIns().info('run: ' + cmd);
+  shelljs.exec(cmd);
 };
 
 try {
@@ -32,4 +33,3 @@ try {
 } catch (e) {
 }
 
-console.log('install end.')
