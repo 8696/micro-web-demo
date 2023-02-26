@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "cross-env NODE_ENV=development ng serve --extra-webpack-config webpack.extra.js",
+    "start": "cross-env NODE_ENV=development ng serve --extra-webpack-config webpack.extra.js --open",
     "build": "cross-env NODE_ENV=production ng build --base-href ./ --extra-webpack-config webpack.extra.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

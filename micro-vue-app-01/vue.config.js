@@ -2,6 +2,7 @@ const packageInfo  = require('./package');
 module.exports = {
   devServer: {
     port: 8884,
+    open: true,
     headers: {
       'Access-Control-Allow-Origin': '*'
     }
