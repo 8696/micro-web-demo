@@ -9,6 +9,10 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
+  "engines": {
+    "node": "^14.20.0 || ^16.13.0",
+    "yarn": ">=1.22.4 <2"
+  },
   "dependencies": {
     "core-js": "^3.25.5",
     "register-service-worker": "^1.7.2",

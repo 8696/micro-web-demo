@@ -13,6 +13,10 @@
     "eslint": "cross-env NODE_ENV=production eslint --fix ./src",
     "preview": "serve -s -u ./build"
   },
+  "engines": {
+    "node": "^14.20.0 || ^16.13.0",
+    "yarn": ">=1.22.4 <2"
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "yarn eslint"
   },
