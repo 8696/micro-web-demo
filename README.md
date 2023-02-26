@@ -42,6 +42,23 @@
 - 扩展
   - 父子通信功能
 
+### 快速启动测试
+
+一键安装依赖 & 一键启动 dev
+
+> yarn start:serve
+
+主应用运行在 [http://localhost:8881](http://localhost:8881/)
+
+
+一键安装依赖 & 一键构建 & 一键预览
+
+> yarn start:preview
+
+运行在 [http://localhost:38003](http://localhost:38003/)
+
+
+
 ### 开发
 
 使用了 `yarn` 管理依赖包
@@ -77,13 +94,6 @@
 
 <p style="color: yellow">当基座主应用运行后加载子应用时报 ChunkLoadError: Loading chunk {x} failed.(missing: http://localhost:8882/static/js/{x}.chunk.js) 错或空白页时，打开控制台禁用缓存可解决</p>
 
-### 快速测试
-
-一键安装依赖 & 一键构建打包 & 一键运行
-
-> yarn start
-
-运行在 [http://localhost:38003](http://localhost:38003/)
 
 ### 部署
 
