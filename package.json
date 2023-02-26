@@ -15,6 +15,10 @@
     "pm2:restart": "pm2 restart pm2.config.js",
     "pm2:deploy": "yarn copy-file && yarn && yarn restart"
   },
+  "engines": {
+    "node": "^14.20.0 || ^16.13.0",
+    "yarn": ">=1.22.4 <2"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/8696/micro-web-demo.git"
@@ -26,11 +30,11 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "koa": "^2.13.4",
-    "koa-static": "^5.0.0"
+    "koa": "2.14.1",
+    "koa-static": "5.0.0"
   },
   "dependencies": {
-    "@types/koa": "^2.13.5",
-    "fs-extra": "^10.1.0"
+    "@types/koa": "2.13.5",
+    "fs-extra": "10.1.0"
   }
 }
