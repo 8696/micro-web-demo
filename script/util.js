@@ -1,7 +1,9 @@
 const fsExtra = require('fs-extra');
 const fs = require('fs');
 const path = require('path');
-
+const log4js = require("log4js")
+const logger = log4js.getLogger();
+logger.level = 'all'
 const PUBLIC_PATH = path.resolve(__dirname, '../public');
 const ROOT_PATH = path.resolve(__dirname, '../');
 
@@ -78,21 +80,36 @@ function copyEntryFile() {
 function clearNodeModules() {
   getMicroPaths().forEach(microApp => {
     try {
-      console.log('remove: ' + path.resolve(microApp, './node_modules'))
+      logger.info('remove: ' + path.resolve(microApp, './node_modules'))
       fsExtra.removeSync(path.resolve(microApp, './node_modules'))
-      console.log('remove: ' + path.resolve(microApp, './build'))
+      logger.info('remove: ' + path.resolve(microApp, './build'))
       fsExtra.removeSync(path.resolve(microApp, './build'))
     } catch (e) {
     }
   })
   try {
+    logger.info('remove: ' + path.resolve(ROOT_PATH, './node_modules'))
     fsExtra.removeSync(path.resolve(ROOT_PATH, './node_modules'))
   } catch (e) {
   }
+
+  try {
+    logger.info('remove: ' + PUBLIC_PATH)
+    fsExtra.removeSync(PUBLIC_PATH)
+  } catch (e) {
+  }
+
+}
+
+function getLogIns() {
+  return logger
 }
 
 module.exports = {
-  getMicroPaths, clearPublicPath, getMicroBuildPaths,
-  clearMicroBuildPaths, getMicroAppName, makePublicMicroPaths,
-  moveAppBuildFileToPublic, copyEntryFile, clearNodeModules
+  clearPublicPath,
+  clearMicroBuildPaths,
+  moveAppBuildFileToPublic,
+  copyEntryFile,
+  clearNodeModules,
+  getLogIns
 }

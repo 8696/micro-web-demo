@@ -4,11 +4,13 @@
   "description": "基于qiankun及micro-app的微前端demo",
   "main": "",
   "scripts": {
-    "start": "yarn i && yarn build && yarn preview",
-    "i": "yarn && yarn clear-node-modules && yarn && node script/install.js ./",
-    "build": "node script/build.js ./ && yarn copy-file",
-    "copy-file": "node script/copy-file.js",
-    "clear-node-modules": "node ./script/clearNodeModules.js",
+    "start:serve": "yarn i && yarn serve",
+    "start:preview": "yarn i && yarn build && yarn preview",
+    "serve": "node script/serve.js ./",
+    "i": "yarn && yarn clearNodeModules && yarn && node script/install.js ./",
+    "build": "node script/build.js ./ && yarn copyBuildToPublic",
+    "copyBuildToPublic": "node script/copyBuildToPublic.js",
+    "clearNodeModules": "node ./script/clearNodeModules.js",
     "preview": "node ./server.js",
     "pm2:start": "pm2 start pm2.config.js",
     "pm2:delete": "pm2 delete pm2.config.js",
@@ -35,6 +37,8 @@
   },
   "dependencies": {
     "@types/koa": "2.13.5",
-    "fs-extra": "10.1.0"
+    "fs-extra": "10.1.0",
+    "log4js": "6.8.0",
+    "shelljs": "0.8.5"
   }
 }
