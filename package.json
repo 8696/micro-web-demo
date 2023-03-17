@@ -4,25 +4,26 @@
   "description": "基于qiankun及micro-app的微前端demo",
   "main": "",
   "scripts": {
-    "start:serve": "yarn i && yarn serve",
-    "start:preview": "yarn i && yarn build && yarn preview",
+    "start:serve": "pnpm run i && pnpm serve",
+    "start:preview": "pnpm run i && pnpm build && pnpm preview",
     "serve": "node script/serve.js ./",
-    "i": "yarn && yarn clearNodeModules && yarn && node script/install.js ./",
-    "build": "node script/build.js ./ && yarn copyBuildToPublic",
+    "i": "pnpm install && pnpm clearNodeModules && pnpm install && node script/install.js ./",
+    "build": "node script/build.js ./ && pnpm copyBuildToPublic",
     "copyBuildToPublic": "node script/copyBuildToPublic.js",
     "clearNodeModules": "node ./script/clearNodeModules.js",
     "preview": "node ./server.js",
     "pm2:start": "pm2 start pm2.config.js",
     "pm2:delete": "pm2 delete pm2.config.js",
     "pm2:restart": "pm2 restart pm2.config.js",
-    "pm2:deploy": "yarn copy-file && yarn && yarn restart",
+    "pm2:deploy": "pnpm install && pnpm copyBuildToPublic && pnpm restart",
     "oss:putOssQK": "node ./script/putOss.js QK",
     "oss:putOssJD": "node ./script/putOss.js JD"
   },
   "engines": {
     "node": "^14.20.0 || ^16.13.0",
-    "yarn": ">=1.22.4 <2"
+    "pnpm": ">=7.10.0"
   },
+  "packageManager": "pnpm@7.10.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/8696/micro-web-demo.git"

@@ -6,20 +6,18 @@
     "start:development": "cross-env CUSTOM_ENV=development node scripts/start.js",
     "start:test": "cross-env CUSTOM_ENV=test node scripts/start.js",
     "start:production": "cross-env CUSTOM_ENV=production node scripts/start.js",
-    "build:development": "yarn eslint && cross-env CUSTOM_ENV=development node scripts/build.js",
-    "build:test": "yarn eslint && cross-env CUSTOM_ENV=test node scripts/build.js",
-    "build:production": "yarn eslint && cross-env CUSTOM_ENV=production node scripts/build.js",
+    "build:development": "pnpm eslint && cross-env CUSTOM_ENV=development node scripts/build.js",
+    "build:test": "pnpm eslint && cross-env CUSTOM_ENV=test node scripts/build.js",
+    "build:production": "pnpm eslint && cross-env CUSTOM_ENV=production node scripts/build.js",
     "test": "node scripts/test.js",
     "eslint": "cross-env NODE_ENV=production eslint --fix ./src",
     "preview": "serve -s -u ./build"
   },
   "engines": {
     "node": "^14.20.0 || ^16.13.0",
-    "yarn": ">=1.22.4 <2"
+    "pnpm": ">=7.10.0"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "yarn eslint"
-  },
+  "packageManager": "pnpm@7.10.0",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,7 +46,7 @@
     "@testing-library/user-event": "12.8.3",
     "@types/jest": "26.0.24",
     "@types/lodash": "4.14.191",
-    "@types/node": "12.20.55",
+    "@types/node": "^18.15.3",
     "@types/react": "17.0.53",
     "@types/react-dom": "17.0.19",
     "@types/react-router-dom": "5.3.3",
@@ -119,6 +117,7 @@
     "zone.js": "0.12.0"
   },
   "devDependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@types/qs": "6.9.7",

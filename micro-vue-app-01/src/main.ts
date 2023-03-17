@@ -23,6 +23,7 @@ function render(props: {basePath?: string}) {
 
 // 如果在 micro-app 环境中渲染
 if (window.__MICRO_APP_ENVIRONMENT__) {
+  // @ts-ignore
   __webpack_public_path__ = window.__MICRO_APP_PUBLIC_PATH__
   window.addEventListener('unmount',  () => {
     // 卸载应用

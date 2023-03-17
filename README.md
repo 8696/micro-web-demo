@@ -46,28 +46,28 @@
 
 一键安装依赖 & 一键启动 dev
 
-> yarn start:serve
+> pnpm start:serve
 
 主应用运行在 [http://localhost:8881](http://localhost:8881/)
 
 
 一键安装依赖 & 一键构建 & 一键预览
 
-> yarn start:preview
+> pnpm start:preview
 
-运行在 [http://localhost:38003](http://localhost:38003/)
+运行在 [http://localhost:38004](http://localhost:38004/)
 
 
 
 ### 开发
 
-使用了 `yarn` 管理依赖包
+使用了 `pnpm` 管理依赖包
 
 **安装依赖**
 
 > 单独安装(分别进入5个应用安装)
 
-> 快速安装 yarn i
+> 快速安装 pnpm run i
 
 
 **端口配置**
@@ -86,11 +86,11 @@
 
 **启动**
 
-> react: yarn start:xxx
+> react: pnpm start:xxx
 
-> vue: yarn serve
+> vue: pnpm serve
 
-> angular: yarn start
+> angular: pnpm start
 
 主应用运行在 [http://localhost:8881/](http://localhost:8881/)
 
