@@ -15,7 +15,6 @@
     "pm2:start": "pm2 start pm2.config.js",
     "pm2:delete": "pm2 delete pm2.config.js",
     "pm2:restart": "pm2 restart pm2.config.js",
-    "pm2:deploy": "pnpm copy-file && pnpm install && pnpm restart",
     "oss:putOssQK": "node ./script/putOss.js QK",
     "oss:putOssJD": "node ./script/putOss.js JD"
   },
