@@ -8,27 +8,27 @@ const serve = (cmd) => {
 };
 
 try {
-  serve('cd '+ p +'micro-base && yarn run start:development');
+  serve('cd '+ p +'micro-base && pnpm start:development');
 }catch (e) {
 }
 
 try {
-  serve('cd '+ p +'micro-react-app-01 && yarn start:development');
+  serve('cd '+ p +'micro-react-app-01 && pnpm start:development');
 } catch (e) {
 }
 
 try {
-  serve('cd '+ p +'micro-react-app-02 && yarn start:development');
+  serve('cd '+ p +'micro-react-app-02 && pnpm start:development');
 } catch (e) {
 }
 
 try {
-  serve('cd '+ p +'micro-vue-app-01 && yarn run serve');
+  serve('cd '+ p +'micro-vue-app-01 && pnpm run serve');
 } catch (e) {
 }
 
 try {
-  serve('cd '+ p +'micro-angular-app-01 && yarn start');
+  serve('cd '+ p +'micro-angular-app-01 && pnpm start');
 } catch (e) {
 }
 
