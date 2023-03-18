@@ -4,11 +4,12 @@
   "description": "基于qiankun及micro-app的微前端demo",
   "main": "",
   "scripts": {
-    "start:serve": "pnpm run i && pnpm serve",
-    "start:preview": "pnpm run i && pnpm build && pnpm preview",
+    "start:serve": "pnpm install && run-s i serve",
+    "start:preview": "pnpm install && run-s i build preview",
+    "i": "pnpm install && node script/install.js ./",
     "serve": "node script/serve.js ./",
-    "i": "pnpm install && pnpm clearNodeModules && pnpm install && node script/install.js ./",
-    "build": "node script/build.js ./ && pnpm copyBuildToPublic",
+    "build": "run-s build-only copyBuildToPublic",
+    "build-only": "node script/build.js ./",
     "copyBuildToPublic": "node script/copyBuildToPublic.js",
     "clearNodeModules": "node ./script/clearNodeModules.js",
     "preview": "node ./server.js",
@@ -44,6 +45,7 @@
     "fs-extra": "10.1.0",
     "glob": "8.1.0",
     "log4js": "6.8.0",
+    "npm-run-all": "^4.1.5",
     "shelljs": "0.8.5"
   }
 }
