@@ -15,17 +15,17 @@
   },
   "packageManager": "pnpm@7.10.0",
   "dependencies": {
-    "@types/node": "^18.15.3",
-    "core-js": "3.28.0",
+    "@types/node": "^18.16.18",
+    "core-js": "3.31.0",
     "register-service-worker": "1.7.2",
-    "tslib": "^2.5.0",
-    "vue": "3.2.47",
+    "tslib": "^2.6.0",
+    "vue": "3.3.4",
     "vue-class-component": "8.0.0-rc.1",
-    "vue-router": "4.1.6",
+    "vue-router": "4.2.2",
     "vuex": "4.1.0"
   },
   "devDependencies": {
-    "@types/chai": "4.3.4",
+    "@types/chai": "4.3.5",
     "@types/mocha": "5.2.7",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
@@ -38,14 +38,14 @@
     "@vue/cli-plugin-unit-mocha": "4.5.19",
     "@vue/cli-plugin-vuex": "4.5.19",
     "@vue/cli-service": "4.5.19",
-    "@vue/compiler-sfc": "3.2.47",
+    "@vue/compiler-sfc": "3.3.4",
     "@vue/eslint-config-typescript": "7.0.0",
-    "@vue/test-utils": "2.3.0",
+    "@vue/test-utils": "2.4.0",
     "chai": "4.3.7",
     "eslint": "6.8.0",
     "eslint-plugin-vue": "7.20.0",
-    "sass": "1.58.3",
+    "sass": "1.63.6",
     "sass-loader": "8.0.2",
-    "typescript": "4.4.4"
+    "typescript": "4.9.5"
   }
 }
