@@ -19,9 +19,9 @@
     "core-js": "3.31.0",
     "register-service-worker": "1.7.2",
     "tslib": "^2.6.0",
-    "vue": "3.3.4",
+    "vue": "3.3.6",
     "vue-class-component": "8.0.0-rc.1",
-    "vue-router": "4.2.2",
+    "vue-router": "4.2.5",
     "vuex": "4.1.0"
   },
   "devDependencies": {
