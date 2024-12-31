@@ -23,7 +23,7 @@
     "node": "^14.20.0 || ^16.13.0",
     "pnpm": ">=7.10.0"
   },
-  "packageManager": "pnpm@7.10.0",
+  "packageManager": "pnpm@7.33.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/8696/micro-web-demo.git"
@@ -35,13 +35,13 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "koa": "2.14.2",
+    "koa": "2.15.3",
     "koa-static": "5.0.0"
   },
   "dependencies": {
-    "@types/ali-oss": "^6.16.10",
-    "@types/koa": "2.13.10",
-    "ali-oss": "6.18.1",
+    "@types/ali-oss": "^6.16.11",
+    "@types/koa": "2.15.0",
+    "ali-oss": "6.22.0",
     "fs-extra": "10.1.0",
     "glob": "8.1.0",
     "log4js": "6.9.1",
